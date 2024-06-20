@@ -1,0 +1,956 @@
+<!DOCTYPE html>
+<!-- saved from url=(0041)https://www.iitg.ac.in/yearbook/tarannum/ -->
+<html class="h-100"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title> TARANNUM | SAIL Year Book Portal </title>
+    <!-- Google Fonts -->
+        <link href="./TARANNUM _ SAIL Year Book Portal_files/css" rel="stylesheet">
+        <link href="./TARANNUM _ SAIL Year Book Portal_files/css(1)" rel="stylesheet">
+        <link href="./TARANNUM _ SAIL Year Book Portal_files/css2" rel="stylesheet">
+        <link href="./TARANNUM _ SAIL Year Book Portal_files/css(2)" rel="stylesheet">
+        <link href="./TARANNUM _ SAIL Year Book Portal_files/css(3)" rel="stylesheet" type="text/css">
+    <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="./TARANNUM _ SAIL Year Book Portal_files/bootstrap-4.4.1.min.css">
+    <!--Bootstrap CSS-->
+        <link rel="stylesheet" href="./TARANNUM _ SAIL Year Book Portal_files/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- Font Awesome CSS -->
+        <link href="./TARANNUM _ SAIL Year Book Portal_files/all.min.css" rel="stylesheet">
+        
+        <link href="https://www.iitg.ac.in/yearbook/static/img/sail_logo.png" rel="shortcut icon" type="image/png">
+    
+
+    <!-- jQuery JS -->
+    <script src="./TARANNUM _ SAIL Year Book Portal_files/jquery-3.4.1.min.js.download"></script>
+    <!-- JavaScript Cookie JS -->
+    <script src="./TARANNUM _ SAIL Year Book Portal_files/js.cookie-2.2.1.min.js.download"></script>
+    <!-- Bootstrap JS -->
+    <script src="./TARANNUM _ SAIL Year Book Portal_files/popper-1.16.0.min.js.download"></script>
+    <script src="./TARANNUM _ SAIL Year Book Portal_files/bootstrap-4.4.1.min.js.download"></script>
+    <link rel="stylesheet" href="./TARANNUM _ SAIL Year Book Portal_files/navbar.css">
+    
+    
+
+<style>
+    a {
+        color: teal;
+    }
+
+    * {
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .panel-body .btn:not(.btn-block) {
+        width: 120px;
+        margin-bottom: 5px;
+    }
+    .card{
+        background: rgba(255, 209, 255, 0.3);
+        box-shadow: 0px 6px 12px rgba(216, 161, 216, 0.1);
+        border-radius: 8px;
+    }
+    body {
+        background-image: linear-gradient(to right, #9375E7, #FFF4D2);
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+        overflow-x: hidden;
+    }
+    body, html{
+        height: 100%;
+        width: 100%; 
+    }
+
+
+</style><script src="chrome-extension://ocggccaacacpienfcgmgcihoombokbbj/pages/client/livestartpage-message-add.js"></script></head>
+
+
+<body class="d-flex flex-column h-100" style="font-family: &#39;Nunito&#39;, sans-serif;" data-new-gr-c-s-check-loaded="14.1182.0" data-gr-ext-installed="">
+    
+    <nav>
+        <script>
+            const userclick = () => {
+                const userbox = document.getElementById('nav-hamburg2');
+                if (userbox.style.display == 'block') {
+                    userbox.style.display = 'none';
+                }
+                else {
+                    userbox.style.display = 'block'
+                }
+
+                const smallnav = document.getElementById('nav-hamburg');
+                smallnav.style.display = 'none';
+            }   
+        </script>
+
+        <div class="navbar">
+            <a href="https://www.iitg.ac.in/yearbook/">
+                <div class="nav-images">
+                    <img src="./TARANNUM _ SAIL Year Book Portal_files/sail.svg" alt="SAIL" class="nav-sail">
+                    <img src="./TARANNUM _ SAIL Year Book Portal_files/yearbook.svg" alt="YEARBOOK" class="nav-yearbook">
+                </div>
+            </a>
+            <div class="nav-links">
+                <a href="https://www.iitg.ac.in/yearbook/">Home</a>
+                <a href="https://www.iitg.ac.in/yearbook/write_testimonial/">Testimonials</a>
+                <a href="https://www.iitg.ac.in/yearbook/polls/">Polls</a>
+                <a href="https://www.iitg.ac.in/yearbook/leaderboard/">Leaderboard</a>
+                <a href="https://www.iitg.ac.in/yearbook/search/">Profiles</a>
+            </div>
+
+
+            <div class="profile_nav">
+                <img src="./TARANNUM _ SAIL Year Book Portal_files/niharika.singh.jpg" alt="USER" class="nav-user-img" onclick="userclick()">
+            </div>
+            <div class="nav-hamburg2" id="nav-hamburg2" style="display: none;">
+                <ul>
+                    <li><a href="https://www.iitg.ac.in/yearbook/niharika.singh/">My Profile</a></li>
+                    <li><a href="https://www.iitg.ac.in/yearbook/logout/">Log Out</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+    
+    <main class="flex-shrink-0">
+        
+<link rel="stylesheet" href="./TARANNUM _ SAIL Year Book Portal_files/font-awesome.min.css">
+<style>
+    .MyProfileR_card {
+    display: flex;
+    height: auto;
+    margin: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.MyProfileR_card_detail {
+    margin: 10px;
+}
+
+.MyProfileR_card_card_name {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 23px;
+    line-height: 28px;
+}
+
+.MyProfileR_card_card_banch {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    margin-top: 10px;
+}
+
+.MyProfileR_card_img {
+    height: 156px;
+    width: 156px;
+    border-radius: 100%;
+    margin-top: 20px;
+}
+
+.MyProfileR_card_card_testimony {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    margin-top: 20px;
+}
+.MyProfileR_card_hr {
+    border: 1px solid white;
+}
+
+.MyProfileR_Search {
+    justify-content: center;
+    display: flex;
+    margin-top: 40px;
+}
+.ProfileR_Search_input {
+    width: 100%;
+    height: 30px;
+    border-radius: 5px;
+    border-width: 0px;
+    padding-left: 20px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+}
+
+.ProfileR_Search_input:focus-visible {
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden;
+    border-bottom-style: groove;
+}
+
+.ProfileR_Search_input_i {
+    height: 33px;
+    position: relative;
+    right: 30px;
+}
+
+</style>
+    <div class="container-fluid mt-3">
+        <div class="row mb-2">
+            
+                <div class="col-xl-3 col-lg-12">
+                    <div class="container-fluid">
+                        <div class="card shadow">
+                            <div style="display: flex; justify-content: center; position: relative;">
+                                <img class="card-img-top" style="border-radius: 50%;width: 16vw;padding-top: 2vh;" width="100%" src="./TARANNUM _ SAIL Year Book Portal_files/tarannum.jpeg" alt="Profile Picture">
+                                
+                            </div>
+                            <div class="card-body">
+                                <h5 style="text-align: center;" class="card-title"><b style="display: flex; justify-content: center;">TARANNUM</b></h5>
+                                <h6 class="card-subtitle" style="text-align: center;">
+                                    Engineering Physics
+                                    <br>
+                                    BTech
+                                    2020
+                                </h6>
+                                <br>
+                                
+                                <div class="card-text">
+                                    <p style="display: flex;justify-content: center;">
+                                        <a href="mailto:tarannum@iitg.ac.in"><i class="fa fa-envelope" style="font-size: 30px;color: black;padding: 0 10px 0 10px;"></i></a>
+                                        <!-- need to change -->
+                                        <a href="https://www.instagram.com/" target="_blank"><i class="fa fa-instagram" style="font-size: 30px;color: black;padding: 0 10px 0 10px;"></i></a> 
+                                        <a href="https://www.linkedin.com/in/" target="_blank"><i class="fa fa-linkedin" style="font-size: 30px;color: black;padding: 0 10px 0 10px;"></i></a> 
+                                    </p>
+                                    <p style="display: flex; justify-content: center;"></p>
+                                    
+                                    <h6><b>Address</b></h6>
+                                    <p style="display: flex; justify-content: center;"></p>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container-fluid">
+                        
+                        <div class="card shadow" style="margin-top: 2vh;">
+                            <div class="card-header">
+                                <h6 class="mb-0">Best memories in campus?</h6>
+                            </div>
+                            <div class="card-body">
+                                <div class="card-text text-justify">
+                                    Walks, small tours and buzzing music of campus and everything 
+                                </div>
+                                
+                            </div>
+                        </div>
+                        
+                        <div class="card shadow" style="margin-top: 2vh;">
+                            <div class="card-header">
+                                <h6 class="mb-0">Biggest change since first year?</h6>
+                            </div>
+                            <div class="card-body">
+                                <div class="card-text text-justify">
+                                    My music playlist 
+                                </div>
+                                
+                            </div>
+                        </div>
+                        
+                        <div class="card shadow" style="margin-top: 2vh;">
+                            <div class="card-header">
+                                <h6 class="mb-0">Best thing you learned from here?</h6>
+                            </div>
+                            <div class="card-body">
+                                <div class="card-text text-justify">
+                                    There are people who are best and their company can make life fun
+                                </div>
+                                
+                            </div>
+                        </div>
+                        
+                        <div class="card shadow" style="margin-top: 2vh;">
+                            <div class="card-header">
+                                <h6 class="mb-0">One thing you'll miss the most?</h6>
+                            </div>
+                            <div class="card-body">
+                                <div class="card-text text-justify">
+                                    People and plants 
+                                </div>
+                                
+                            </div>
+                        </div>
+                        
+                        <div class="card shadow" style="margin-top: 2vh;">
+                            <div class="card-header">
+                                <h6 class="mb-0">One thing you regret&nbsp;not&nbsp;doing?</h6>
+                            </div>
+                            <div class="card-body">
+                                <div class="card-text text-justify">
+                                    Playing a skit where all roleplays are played by me. Yes I practiced this many times :D
+                                </div>
+                                
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="col-xl-7 col-lg-12 mt-xl-0 mt-sm-4">
+                    <div class="container-fluid">
+                        <h3 class="text-center" style="font-weight: bold;">Testimonials</h3>
+                        
+                            
+                                <button type="button" class="btn btn-dark" style="width: 100%;" data-toggle="modal" data-target="#testimonial-modal">
+                                     Edit testimonial
+                                </button>
+                                <div class="modal fade" id="testimonial-modal" tabindex="-1" role="dialog">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h6 class="modal-title"> Edit testimonial</h6>
+                                                <button type="button" class="close" data-dismiss="modal">
+                                                    <span>×</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <textarea id="add-testimonial-form-content" autocomplete="off" class="form-control" rows="5" name="content" placeholder="Write your testimonial for TARANNUM here">Hello Tarannum
+You're a very kind/cute person. we have spent most of our college life together and shared tons of memories, Thank you for everything, you have helped me a lot, always ready to help jab bhi mereko jarurat thi. I wish you get everything you want in life. stay in touch :)</textarea>
+                                                <br>
+                                                
+                                                <button class="btn btn-dark" style="width: 100%;" onclick="addTestimonial()">
+                                                     Edit testimonial
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                        
+                        
+                        <div class="MyProfileR_card">
+                            <a href="https://www.iitg.ac.in/yearbook/m.lakshya/">
+                                <div class="MyProfileR_card_image">
+                                <img alt="" src="./TARANNUM _ SAIL Year Book Portal_files/m.lakshya.jpeg" class="MyProfileR_card_img">
+                                </div>
+                            </a>
+                            <div class="MyProfileR_card_detail">
+                                <a style="text-decoration: none; color: inherit;" href="https://www.iitg.ac.in/yearbook/m.lakshya/">
+                                    <div class="MyProfileR_card_card_name">LAKSHYA MITTAL</div>
+                                    <div class="MyProfileR_card_card_banch">
+                                        Engineering Physics ,
+                                            BTech
+                                            2020
+                                    </div>
+                                </a>
+                                <div class="MyProfileR_card_card_testimony">
+                                    Hiiii Tarannum !!! How sweet and adorable someone can be. Your innocence and ability to achieve everything single handedly says a lot about your personality. We shared a great time together, walks around the campus, market complex, Ganesh Chaturthi, airport talks and numerous other events. Bas thoda sa aur extrovert ban ja. Hoping to see u in Delhi. Keep shining and exploring what u love. 
+                                </div>
+                                <div class="MyProfileR_card_card_buttons"></div>
+                            </div>
+                            <p style="position: absolute; right: 2.5vw;">
+                                
+                            </p>
+                        </div>
+                        <hr class="MyProfileR_card_hr">
+                          
+                        
+                        <div class="MyProfileR_card">
+                            <a href="https://www.iitg.ac.in/yearbook/r.chitti/">
+                                <div class="MyProfileR_card_image">
+                                <img alt="" src="./TARANNUM _ SAIL Year Book Portal_files/r.chitti.jpg" class="MyProfileR_card_img">
+                                </div>
+                            </a>
+                            <div class="MyProfileR_card_detail">
+                                <a style="text-decoration: none; color: inherit;" href="https://www.iitg.ac.in/yearbook/r.chitti/">
+                                    <div class="MyProfileR_card_card_name">CHITTI AVINASH REDDY</div>
+                                    <div class="MyProfileR_card_card_banch">
+                                        Engineering Physics ,
+                                            BTech
+                                            2020
+                                    </div>
+                                </a>
+                                <div class="MyProfileR_card_card_testimony">
+                                    Hey Tarannum,<br><br>You are one of the most beautiful and interesting people I’ve met at IITG. The more I got to know you, the more I realised there’s so much more to discover. Your innocent humour is refreshing, and I hope you break out from your shell and share it with the world. I hope this testimonial serves as a reminder for us to keep in touch. A promise is a promise, after all!
+                                </div>
+                                <div class="MyProfileR_card_card_buttons"></div>
+                            </div>
+                            <p style="position: absolute; right: 2.5vw;">
+                                
+                            </p>
+                        </div>
+                        <hr class="MyProfileR_card_hr">
+                          
+                        
+                        <div class="MyProfileR_card">
+                            <a href="https://www.iitg.ac.in/yearbook/pkamei/">
+                                <div class="MyProfileR_card_image">
+                                <img alt="" src="./TARANNUM _ SAIL Year Book Portal_files/pkamei.jpeg" class="MyProfileR_card_img">
+                                </div>
+                            </a>
+                            <div class="MyProfileR_card_detail">
+                                <a style="text-decoration: none; color: inherit;" href="https://www.iitg.ac.in/yearbook/pkamei/">
+                                    <div class="MyProfileR_card_card_name">PANTITHUANLIU KAMEI</div>
+                                    <div class="MyProfileR_card_card_banch">
+                                        Engineering Physics ,
+                                            BTech
+                                            2020
+                                    </div>
+                                </a>
+                                <div class="MyProfileR_card_card_testimony">
+                                    Dear tarannum,<br>You have been such a good friend of mine. We had spent a lot of time together and I know that you are such a simple girl. You are great and you work so hard to achieve whatever you want. Your patience and everything is what I should learn from you. I wish you the best in everything you'll be doing in near future. Good luck girl. You are beautiful. 
+                                </div>
+                                <div class="MyProfileR_card_card_buttons"></div>
+                            </div>
+                            <p style="position: absolute; right: 2.5vw;">
+                                
+                            </p>
+                        </div>
+                        <hr class="MyProfileR_card_hr">
+                          
+                        
+                        <div class="MyProfileR_card">
+                            <a href="https://www.iitg.ac.in/yearbook/niharika.singh/">
+                                <div class="MyProfileR_card_image">
+                                <img alt="" src="./TARANNUM _ SAIL Year Book Portal_files/niharika.singh.jpg" class="MyProfileR_card_img">
+                                </div>
+                            </a>
+                            <div class="MyProfileR_card_detail">
+                                <a style="text-decoration: none; color: inherit;" href="https://www.iitg.ac.in/yearbook/niharika.singh/">
+                                    <div class="MyProfileR_card_card_name">NIHARIKA SINGH</div>
+                                    <div class="MyProfileR_card_card_banch">
+                                        Engineering Physics ,
+                                            BTech
+                                            2020
+                                    </div>
+                                </a>
+                                <div class="MyProfileR_card_card_testimony">
+                                    Hello Tarannum<br>You're a very kind/cute person. we have spent most of our college life together and shared tons of memories, Thank you for everything, you have helped me a lot, always ready to help jab bhi mereko jarurat thi. I wish you get everything you want in life. stay in touch :)
+                                </div>
+                                <div class="MyProfileR_card_card_buttons"></div>
+                            </div>
+                            <p style="position: absolute; right: 2.5vw;">
+                                
+                                    <button class="btn btn" data-toggle="modal" data-target="#testimonial-modal"><i style="color: black;font-family: 25px;" class="fas fa-edit"></i></button>
+                                    <button class="btn" onclick="deleteTestimonial(9436)" data-toggle="tooltip" title="Delete the testimonial from your profile.">
+                                        <i class="fa fa-trash" style="color: black;font-size: 25px;"></i>
+                                    </button>
+                                
+                            </p>
+                        </div>
+                        <hr class="MyProfileR_card_hr">
+                          
+                        
+                        <div class="MyProfileR_card">
+                            <a href="https://www.iitg.ac.in/yearbook/c.chetan/">
+                                <div class="MyProfileR_card_image">
+                                <img alt="" src="./TARANNUM _ SAIL Year Book Portal_files/c.chetan.jpeg" class="MyProfileR_card_img">
+                                </div>
+                            </a>
+                            <div class="MyProfileR_card_detail">
+                                <a style="text-decoration: none; color: inherit;" href="https://www.iitg.ac.in/yearbook/c.chetan/">
+                                    <div class="MyProfileR_card_card_name">CHETAN MAROTI CHINCHULKAR</div>
+                                    <div class="MyProfileR_card_card_banch">
+                                        Engineering Physics ,
+                                            BTech
+                                            2020
+                                    </div>
+                                </a>
+                                <div class="MyProfileR_card_card_testimony">
+                                    Hello Tarannum...<br>You're the most innocent person in the campus. You speak very rarely but whenever you did you made us laugh...<br>It's a great walk with you and Avinash Reddy on your last day... Had a great time...<br>Always be such cheerful and happy <br>All the best:)
+                                </div>
+                                <div class="MyProfileR_card_card_buttons"></div>
+                            </div>
+                            <p style="position: absolute; right: 2.5vw;">
+                                
+                            </p>
+                        </div>
+                        <hr class="MyProfileR_card_hr">
+                          
+                        
+                        <div class="MyProfileR_card">
+                            <a href="https://www.iitg.ac.in/yearbook/v.shavi/">
+                                <div class="MyProfileR_card_image">
+                                <img alt="" src="./TARANNUM _ SAIL Year Book Portal_files/v.shavi.jpg" class="MyProfileR_card_img">
+                                </div>
+                            </a>
+                            <div class="MyProfileR_card_detail">
+                                <a style="text-decoration: none; color: inherit;" href="https://www.iitg.ac.in/yearbook/v.shavi/">
+                                    <div class="MyProfileR_card_card_name">VIKAS S SHAVI</div>
+                                    <div class="MyProfileR_card_card_banch">
+                                        Engineering Physics ,
+                                            BTech
+                                            2020
+                                    </div>
+                                </a>
+                                <div class="MyProfileR_card_card_testimony">
+                                    Hiee! Talking with you was always a unique experience every time. You're incredibly kind, respectful, and wonderfully weird (in the best way!!!). Stay weird because that's what makes you, you! It was great getting to know you. 
+                                </div>
+                                <div class="MyProfileR_card_card_buttons"></div>
+                            </div>
+                            <p style="position: absolute; right: 2.5vw;">
+                                
+                            </p>
+                        </div>
+                        <hr class="MyProfileR_card_hr">
+                          
+                        
+                        <div class="MyProfileR_card">
+                            <a href="https://www.iitg.ac.in/yearbook/teresa/">
+                                <div class="MyProfileR_card_image">
+                                <img alt="" src="./TARANNUM _ SAIL Year Book Portal_files/teresa.jpeg" class="MyProfileR_card_img">
+                                </div>
+                            </a>
+                            <div class="MyProfileR_card_detail">
+                                <a style="text-decoration: none; color: inherit;" href="https://www.iitg.ac.in/yearbook/teresa/">
+                                    <div class="MyProfileR_card_card_name">TERESA JACOB</div>
+                                    <div class="MyProfileR_card_card_banch">
+                                        Engineering Physics ,
+                                            BTech
+                                            2020
+                                    </div>
+                                </a>
+                                <div class="MyProfileR_card_card_testimony">
+                                    Heyy,<br>I love how genuine and kind you are. <br>Please don't change for anyone or anything. It was a pleasure getting to know you. I hope you find everything you're looking for in life.<br>Good luck darling 
+                                </div>
+                                <div class="MyProfileR_card_card_buttons"></div>
+                            </div>
+                            <p style="position: absolute; right: 2.5vw;">
+                                
+                            </p>
+                        </div>
+                        <hr class="MyProfileR_card_hr">
+                          
+                        
+                        <div class="MyProfileR_card">
+                            <a href="https://www.iitg.ac.in/yearbook/s.gandrathi/">
+                                <div class="MyProfileR_card_image">
+                                <img alt="" src="./TARANNUM _ SAIL Year Book Portal_files/s.gandrathi.jpg" class="MyProfileR_card_img">
+                                </div>
+                            </a>
+                            <div class="MyProfileR_card_detail">
+                                <a style="text-decoration: none; color: inherit;" href="https://www.iitg.ac.in/yearbook/s.gandrathi/">
+                                    <div class="MyProfileR_card_card_name">GANDRATHI SRIJA</div>
+                                    <div class="MyProfileR_card_card_banch">
+                                        Computer Science &amp; Engineering ,
+                                            BTech
+                                            2020
+                                    </div>
+                                </a>
+                                <div class="MyProfileR_card_card_testimony">
+                                    Hey Tarannum,<br><br>You are always been sweet and nice to me, I will always cherish the time we spent together.<br><br>All the best for all the great things you are going to achieve.<br><br>Keep smiling... :-)
+                                </div>
+                                <div class="MyProfileR_card_card_buttons"></div>
+                            </div>
+                            <p style="position: absolute; right: 2.5vw;">
+                                
+                            </p>
+                        </div>
+                        <hr class="MyProfileR_card_hr">
+                          
+                        
+                        <div class="MyProfileR_card">
+                            <a href="https://www.iitg.ac.in/yearbook/j.aditi/">
+                                <div class="MyProfileR_card_image">
+                                <img alt="" src="./TARANNUM _ SAIL Year Book Portal_files/j.aditi.jpg" class="MyProfileR_card_img">
+                                </div>
+                            </a>
+                            <div class="MyProfileR_card_detail">
+                                <a style="text-decoration: none; color: inherit;" href="https://www.iitg.ac.in/yearbook/j.aditi/">
+                                    <div class="MyProfileR_card_card_name">JOSHI ADITI</div>
+                                    <div class="MyProfileR_card_card_banch">
+                                        Engineering Physics ,
+                                            BTech
+                                            2020
+                                    </div>
+                                </a>
+                                <div class="MyProfileR_card_card_testimony">
+                                    Hi Tararnnum! you are one of the sweetest and kindest <br>people ik. I'll defo miss our  random mess run ins and then   having food  together.  Wishing you all the happiness!  Stay in touch!
+                                </div>
+                                <div class="MyProfileR_card_card_buttons"></div>
+                            </div>
+                            <p style="position: absolute; right: 2.5vw;">
+                                
+                            </p>
+                        </div>
+                        <hr class="MyProfileR_card_hr">
+                          
+                        
+                        <div class="MyProfileR_card">
+                            <a href="https://www.iitg.ac.in/yearbook/d.gorityala/">
+                                <div class="MyProfileR_card_image">
+                                <img alt="" src="./TARANNUM _ SAIL Year Book Portal_files/no-profile-pic.png" class="MyProfileR_card_img">
+                                </div>
+                            </a>
+                            <div class="MyProfileR_card_detail">
+                                <a style="text-decoration: none; color: inherit;" href="https://www.iitg.ac.in/yearbook/d.gorityala/">
+                                    <div class="MyProfileR_card_card_name">GORITYALA DEEPTHI</div>
+                                    <div class="MyProfileR_card_card_banch">
+                                        Engineering Physics ,
+                                            BTech
+                                            2020
+                                    </div>
+                                </a>
+                                <div class="MyProfileR_card_card_testimony">
+                                    We had a lot of low key memories starting from first year. Campus tours in initial days, walks between hostel and classes. I wish you all the best for your future endeavors!!!
+                                </div>
+                                <div class="MyProfileR_card_card_buttons"></div>
+                            </div>
+                            <p style="position: absolute; right: 2.5vw;">
+                                
+                            </p>
+                        </div>
+                        <hr class="MyProfileR_card_hr">
+                          
+                        
+                        <div class="MyProfileR_card">
+                            <a href="https://www.iitg.ac.in/yearbook/j.nidhi/">
+                                <div class="MyProfileR_card_image">
+                                <img alt="" src="./TARANNUM _ SAIL Year Book Portal_files/j.nidhi.jpeg" class="MyProfileR_card_img">
+                                </div>
+                            </a>
+                            <div class="MyProfileR_card_detail">
+                                <a style="text-decoration: none; color: inherit;" href="https://www.iitg.ac.in/yearbook/j.nidhi/">
+                                    <div class="MyProfileR_card_card_name">NIDHI JAIN</div>
+                                    <div class="MyProfileR_card_card_banch">
+                                        Civil Engineering ,
+                                            BTech
+                                            2020
+                                    </div>
+                                </a>
+                                <div class="MyProfileR_card_card_testimony">
+                                    I met this girl in 1st year of the electronics club, have a shy personality. love to work on our hand sensor-led project :) <br>Stay the same and All the best for your future :)
+                                </div>
+                                <div class="MyProfileR_card_card_buttons"></div>
+                            </div>
+                            <p style="position: absolute; right: 2.5vw;">
+                                
+                            </p>
+                        </div>
+                        <hr class="MyProfileR_card_hr">
+                          
+                        
+                        <div class="MyProfileR_card">
+                            <a href="https://www.iitg.ac.in/yearbook/dhruv.kumar/">
+                                <div class="MyProfileR_card_image">
+                                <img alt="" src="./TARANNUM _ SAIL Year Book Portal_files/dhruv.kumar.jpg" class="MyProfileR_card_img">
+                                </div>
+                            </a>
+                            <div class="MyProfileR_card_detail">
+                                <a style="text-decoration: none; color: inherit;" href="https://www.iitg.ac.in/yearbook/dhruv.kumar/">
+                                    <div class="MyProfileR_card_card_name">DHRUV KUMAR</div>
+                                    <div class="MyProfileR_card_card_banch">
+                                        Engineering Physics ,
+                                            BTech
+                                            2020
+                                    </div>
+                                </a>
+                                <div class="MyProfileR_card_card_testimony">
+                                    Cute ladki, constant smile and fun loving. Your sweet humour makes you different from others. Stay as you are. Socialise more so that people know how cool you are.
+                                </div>
+                                <div class="MyProfileR_card_card_buttons"></div>
+                            </div>
+                            <p style="position: absolute; right: 2.5vw;">
+                                
+                            </p>
+                        </div>
+                        <hr class="MyProfileR_card_hr">
+                          
+                        
+                        <div class="MyProfileR_card">
+                            <a href="https://www.iitg.ac.in/yearbook/b.ashwitha/">
+                                <div class="MyProfileR_card_image">
+                                <img alt="" src="./TARANNUM _ SAIL Year Book Portal_files/no-profile-pic.png" class="MyProfileR_card_img">
+                                </div>
+                            </a>
+                            <div class="MyProfileR_card_detail">
+                                <a style="text-decoration: none; color: inherit;" href="https://www.iitg.ac.in/yearbook/b.ashwitha/">
+                                    <div class="MyProfileR_card_card_name">ASHWITHA BANOTH</div>
+                                    <div class="MyProfileR_card_card_banch">
+                                        Computer Science &amp; Engineering ,
+                                            BTech
+                                            2020
+                                    </div>
+                                </a>
+                                <div class="MyProfileR_card_card_testimony">
+                                    very sweet and adorable person i have met in college, I haven't seen you missing one class in the whole sem. let's keep in touch. all the best for future.
+                                </div>
+                                <div class="MyProfileR_card_card_buttons"></div>
+                            </div>
+                            <p style="position: absolute; right: 2.5vw;">
+                                
+                            </p>
+                        </div>
+                        <hr class="MyProfileR_card_hr">
+                          
+                        
+                        <div class="MyProfileR_card">
+                            <a href="https://www.iitg.ac.in/yearbook/s.madhira/">
+                                <div class="MyProfileR_card_image">
+                                <img alt="" src="./TARANNUM _ SAIL Year Book Portal_files/s.madhira.jpg" class="MyProfileR_card_img">
+                                </div>
+                            </a>
+                            <div class="MyProfileR_card_detail">
+                                <a style="text-decoration: none; color: inherit;" href="https://www.iitg.ac.in/yearbook/s.madhira/">
+                                    <div class="MyProfileR_card_card_name">MADHIRA JAYENDRA SHANKAR</div>
+                                    <div class="MyProfileR_card_card_banch">
+                                        Engineering Physics ,
+                                            BTech
+                                            2020
+                                    </div>
+                                </a>
+                                <div class="MyProfileR_card_card_testimony">
+                                    A very sweet and clam person! And I was really suprized to know you live in vizag!! everytime I see you, you are smiling, keep doing that! All the best.
+                                </div>
+                                <div class="MyProfileR_card_card_buttons"></div>
+                            </div>
+                            <p style="position: absolute; right: 2.5vw;">
+                                
+                            </p>
+                        </div>
+                        <hr class="MyProfileR_card_hr">
+                          
+                        
+                        <div class="MyProfileR_card">
+                            <a href="https://www.iitg.ac.in/yearbook/s.bharadwaj/">
+                                <div class="MyProfileR_card_image">
+                                <img alt="" src="./TARANNUM _ SAIL Year Book Portal_files/s.bharadwaj.jpg" class="MyProfileR_card_img">
+                                </div>
+                            </a>
+                            <div class="MyProfileR_card_detail">
+                                <a style="text-decoration: none; color: inherit;" href="https://www.iitg.ac.in/yearbook/s.bharadwaj/">
+                                    <div class="MyProfileR_card_card_name">S VENKAT BHARADWAJ</div>
+                                    <div class="MyProfileR_card_card_banch">
+                                        Engineering Physics ,
+                                            BTech
+                                            2020
+                                    </div>
+                                </a>
+                                <div class="MyProfileR_card_card_testimony">
+                                    The only other person who attended more classes than me lol. Thanks for sharing your notes whenever I missed classes. All the best for your future. 
+                                </div>
+                                <div class="MyProfileR_card_card_buttons"></div>
+                            </div>
+                            <p style="position: absolute; right: 2.5vw;">
+                                
+                            </p>
+                        </div>
+                        <hr class="MyProfileR_card_hr">
+                          
+                        
+                        <div class="MyProfileR_card">
+                            <a href="https://www.iitg.ac.in/yearbook/m.minali/">
+                                <div class="MyProfileR_card_image">
+                                <img alt="" src="./TARANNUM _ SAIL Year Book Portal_files/m.minali.jpg" class="MyProfileR_card_img">
+                                </div>
+                            </a>
+                            <div class="MyProfileR_card_detail">
+                                <a style="text-decoration: none; color: inherit;" href="https://www.iitg.ac.in/yearbook/m.minali/">
+                                    <div class="MyProfileR_card_card_name">MINALI MANHAR</div>
+                                    <div class="MyProfileR_card_card_banch">
+                                        Computer Science &amp; Engineering ,
+                                            BTech
+                                            2020
+                                    </div>
+                                </a>
+                                <div class="MyProfileR_card_card_testimony">
+                                    Tarannum<br>You are the sweetest neighbour and a wonderful friend :)<br>It was always great to hangout with you. All the best for your future endeavers. 
+                                </div>
+                                <div class="MyProfileR_card_card_buttons"></div>
+                            </div>
+                            <p style="position: absolute; right: 2.5vw;">
+                                
+                            </p>
+                        </div>
+                        <hr class="MyProfileR_card_hr">
+                          
+                        
+                        <div class="MyProfileR_card">
+                            <a href="https://www.iitg.ac.in/yearbook/m.kavin/">
+                                <div class="MyProfileR_card_image">
+                                <img alt="" src="./TARANNUM _ SAIL Year Book Portal_files/m.kavin.jpg" class="MyProfileR_card_img">
+                                </div>
+                            </a>
+                            <div class="MyProfileR_card_detail">
+                                <a style="text-decoration: none; color: inherit;" href="https://www.iitg.ac.in/yearbook/m.kavin/">
+                                    <div class="MyProfileR_card_card_name">M KAVIN</div>
+                                    <div class="MyProfileR_card_card_banch">
+                                        Engineering Physics ,
+                                            BTech
+                                            2020
+                                    </div>
+                                </a>
+                                <div class="MyProfileR_card_card_testimony">
+                                    Your innocence and your humour is refreshing to be a witness to. You never fail to light up the room with your smile and your charm. Never lose it.
+                                </div>
+                                <div class="MyProfileR_card_card_buttons"></div>
+                            </div>
+                            <p style="position: absolute; right: 2.5vw;">
+                                
+                            </p>
+                        </div>
+                        <hr class="MyProfileR_card_hr">
+                          
+                        
+                        <div class="MyProfileR_card">
+                            <a href="https://www.iitg.ac.in/yearbook/sagvekar/">
+                                <div class="MyProfileR_card_image">
+                                <img alt="" src="./TARANNUM _ SAIL Year Book Portal_files/sagvekar.jpg" class="MyProfileR_card_img">
+                                </div>
+                            </a>
+                            <div class="MyProfileR_card_detail">
+                                <a style="text-decoration: none; color: inherit;" href="https://www.iitg.ac.in/yearbook/sagvekar/">
+                                    <div class="MyProfileR_card_card_name">SAGVEKAR ROHIT VIKAS</div>
+                                    <div class="MyProfileR_card_card_banch">
+                                        Biosciences &amp; Bioengineering ,
+                                            BTech
+                                            2020
+                                    </div>
+                                </a>
+                                <div class="MyProfileR_card_card_testimony">
+                                    A dove in human form. Very sweet and innocent. Sabse bohot pyaar se baat karti hai. Don't change a single thing about yourself. God bless you. 
+                                </div>
+                                <div class="MyProfileR_card_card_buttons"></div>
+                            </div>
+                            <p style="position: absolute; right: 2.5vw;">
+                                
+                            </p>
+                        </div>
+                        <hr class="MyProfileR_card_hr">
+                          
+                        
+                    </div>
+                </div>
+            
+        </div>
+    </div>
+
+    </main>
+    
+    <!-- Disable Emoji -->
+    <script src="./TARANNUM _ SAIL Year Book Portal_files/disable_emoji.js.download"></script>
+    
+    <script>
+        const lines = document.getElementsByClassName("MyProfileR_card_hr");
+        function myFunction() {
+            console.log("hi");
+            var input, filter, cards, cardContainer, title, i;
+            input = document.getElementById("myFilter");
+            filter = input.value.toUpperCase();
+            cards = document.getElementsByClassName("MyProfileR_card");
+            for (i = 0; i < cards.length; i++) {
+                title1 = cards[i].querySelector(".MyProfileR_card_card_banch")
+                title2 = cards[i].querySelector(".MyProfileR_card_card_name")
+                if ((title1.innerText+title2.innerText).toUpperCase().indexOf(filter) > -1) {
+                cards[i].style.display = "";
+                lines[i].style.display = "";
+                } else {
+                cards[i].style.display = "none";
+                lines[i].style.display = "none";
+                }
+            }
+        }
+        function favouriteTestimonial(testimonial_id){
+            $.ajax({
+                type: "POST",
+                url: '/yearbook/favourite_testimonial/',
+                data: {
+                    'testimonial_id': testimonial_id,
+                    'csrfmiddlewaretoken': Cookies.get("csrftoken")
+                },
+                success: function (data) {
+                    if (data.status === 1){
+                        location.reload();
+                    }
+                    else{
+                        alert(data.error);
+                    }
+                }
+            });
+
+        }
+        function deleteTestimonial(testimonial_id){
+            if (confirm("Do you want to delete the testimonial ?!\n It can't be recovered once deleted.")) {
+                $.ajax({
+                    type: "POST",
+                    url: '/yearbook/delete_testimonial/',
+                    data: {
+                        'testimonial_id': testimonial_id,
+                        'csrfmiddlewaretoken': Cookies.get("csrftoken")
+                    },
+                    success: function (data) {
+                        if (data.status === 1){
+                            $("#testimonial-"+testimonial_id.toString()).remove();
+                            alert(data.message);
+                            location.reload();
+                        }
+                        else{
+                            alert(data.error);
+                        }
+                    }
+                });
+            }
+
+        }
+        function addTestimonial() {
+        var cont=$("#add-testimonial-form-content").val();
+        cont=removeEmojis(cont);
+        $("#add-testimonial-form-content").val(cont);
+            $.ajax({
+                type: "POST",
+                url: '/yearbook/tarannum/add_testimonial/',
+                data: {
+                    'content': $("#add-testimonial-form-content").val(),
+                    'csrfmiddlewaretoken': Cookies.get("csrftoken")
+                },
+                success: function (data) {
+                    if (data.status === 1){
+                        location.reload();
+                    }
+                    else{
+                        alert(data.error);
+                    }
+                }
+            });
+        }
+        function changeAnswer(question_id) {
+            $.ajax({
+                type: "POST",
+                url: '/yearbook/tarannum/change_answer/',
+                data: {
+                    'question_id': question_id,
+                    'answer': $("#profile-answer-"+question_id.toString()).val(),
+                    'csrfmiddlewaretoken': Cookies.get("csrftoken")
+                },
+                success: function (data) {
+                    if (data.status === 1){
+                        location.reload();
+                    }
+                    else{
+                        alert(data.error);
+                    }
+                }
+            });
+        }
+    </script>
+
+
+
+</body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+      div.grammarly-desktop-integration {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select:none;
+        user-select:none;
+      }
+
+      div.grammarly-desktop-integration:before {
+        content: attr(data-content);
+      }
+    </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{&quot;mode&quot;:&quot;limited&quot;,&quot;isActive&quot;:false,&quot;isUserDisabled&quot;:false}"></div></template></grammarly-desktop-integration></html>

@@ -1,0 +1,963 @@
+<!DOCTYPE html>
+<html class="h-100">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title> Profile Search | SAIL Year Book Portal </title>
+    <!-- Google Fonts -->
+    <link href="./DATA/Profile Search _ SAIL Year Book Portal_files/css" rel="stylesheet">
+    <link href="./DATA/Profile Search _ SAIL Year Book Portal_files/css(1)" rel="stylesheet">
+    <link href="./DATA/Profile Search _ SAIL Year Book Portal_files/css2" rel="stylesheet">
+    <link href="./DATA/Profile Search _ SAIL Year Book Portal_files/css(2)" rel="stylesheet">
+    <link href="./DATA/Profile Search _ SAIL Year Book Portal_files/css(3)" rel="stylesheet" type="text/css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="./DATA/Profile Search _ SAIL Year Book Portal_files/bootstrap-4.4.1.min.css">
+    <!--Bootstrap CSS-->
+    <link rel="stylesheet" href="./DATA/Profile Search _ SAIL Year Book Portal_files/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- Font Awesome CSS -->
+    <link href="./DATA/Profile Search _ SAIL Year Book Portal_files/all.min.css" rel="stylesheet">
+    <link href="https://www.iitg.ac.in/yearbook/static/img/sail_logo.png" rel="shortcut icon" type="image/png">
+    <link rel="stylesheet" type="text/css" href="./DATA/Profile Search _ SAIL Year Book Portal_files/search.css"> 
+
+    <!-- jQuery JS -->
+    <script src="./Profile Search _ SAIL Year Book Portal_files/jquery-3.4.1.min.js.download"></script>
+    <!-- JavaScript Cookie JS -->
+    <script src="./Profile Search _ SAIL Year Book Portal_files/js.cookie-2.2.1.min.js.download"></script>
+    <!-- Bootstrap JS -->
+    <script src="./Profile Search _ SAIL Year Book Portal_files/popper-1.16.0.min.js.download"></script>
+    <script src="./Profile Search _ SAIL Year Book Portal_files/bootstrap-4.4.1.min.js.download"></script>
+    <link rel="stylesheet" href="./DATA/Profile Search _ SAIL Year Book Portal_files/navbar.css">
+    
+    <style>
+        a {
+            color: teal;
+        }
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+        .panel-body .btn:not(.btn-block) {
+            width: 120px;
+            margin-bottom: 5px;
+        }
+        
+        .card {
+            background: rgba(255, 209, 255, 0.3);
+            box-shadow: 0px 6px 12px rgba(216, 161, 216, 0.1);
+            border-radius: 8px;
+        }
+        body {
+            background-image: linear-gradient(to right, #9375E7, #FFF4D2);
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+            overflow-x: hidden;
+        }
+        body, html {
+            height: 100%;
+            width: 100%; 
+        }
+    </style>
+</head>
+
+<body class="d-flex flex-column h-100">
+    <nav>
+        <script>
+            const userclick = () => {
+                const userbox = document.getElementById('nav-hamburg2');
+                if (userbox.style.display == 'block') {
+                    userbox.style.display = 'none';
+                } else {
+                    userbox.style.display = 'block';
+                }
+                const smallnav = document.getElementById('nav-hamburg');
+                smallnav.style.display = 'none';
+            }
+        </script>
+
+        <div class="navbar">
+            <a href="https://www.iitg.ac.in/yearbook/">
+                <div class="nav-images">
+                    <img src="DATA/Profile Search _ SAIL Year Book Portal_files/sail.svg" alt="SAIL" class="nav-sail">
+                    <img src="DATA/Profile Search _ SAIL Year Book Portal_files/yearbook.svg" alt="YEARBOOK" class="nav-yearbook">
+                </div>
+            </a>
+            <div class="nav-links">
+                <a href="https://www.iitg.ac.in/yearbook/">Home</a>
+                <a href="https://www.iitg.ac.in/yearbook/write_testimonial/">Testimonials</a>
+                <a href="https://www.iitg.ac.in/yearbook/polls/">Polls</a>
+                <a href="https://www.iitg.ac.in/yearbook/leaderboard/">Leaderboard</a>
+                <a href="https://www.iitg.ac.in/yearbook/search/">Profiles</a>
+            </div>
+
+            <div class="profile_nav">
+                <img src="DATA/Profile Search _ SAIL Year Book Portal_files/niharika.singh.jpg" alt="USER" class="nav-user-img" onclick="userclick()">
+            </div>
+            <div class="nav-hamburg2" id="nav-hamburg2" style="display: none;">
+                <ul>
+                    <li><a href="https://www.iitg.ac.in/yearbook/niharika.singh/">My Profile</a></li>
+                    <li><a href="https://www.iitg.ac.in/yearbook/logout/">Log Out</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="flex-shrink-0">
+        <div class="container-fluid mt-4">
+            <div class="swiper" id="profile-links-flex">
+                <div class="abc">
+                    <div class="nav-search-cont">
+                        <form method="get" action="https://www.iitg.ac.in/yearbook/search/">
+                            <input onkeyup="searchFunction()" id="search-input" type="text" placeholder="Search for friend" name="key">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="nav-search-icon">
+                                <path d="M7.33333 12.6667C10.2789 12.6667 12.6667 10.2789 12.6667 7.33333C12.6667 4.38781 10.2789 2 7.33333 2C4.38781 2 2 4.38781 2 7.33333C2 10.2789 4.38781 12.6667 7.33333 12.6667Z" stroke="#64748B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                <path d="M13.9996 13.9996L11.0996 11.0996" stroke="#64748B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                        </form>
+                    </div>
+                </div>
+
+            <div class="swiper-flex" id="swiperflex">
+                <a href="DATA/NIHARIKA SINGH _ SAIL Year Book Portal.html" style="text-decoration: none;display: flex;">
+                    <div class="card">
+                        <div class="thumbnail">
+                            <img src="DATA/NIHARIKA SINGH _ SAIL Year Book Portal_files/niharika.singh.jpg" alt="Profile pic">
+                        </div>
+                        <h4>NIHARIKA SINGH</h4>
+                        <div class="desc">
+                            <p align="center" class="info">Engineering Physics, BTech, 2020</p>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="DATA/CHETAN MAROTI CHINCHULKAR _ SAIL Year Book Portal.html" style="text-decoration: none;display: flex;">
+                    <div class="card">
+                        <div class="thumbnail">
+                            <img src="DATA/CHETAN MAROTI CHINCHULKAR _ SAIL Year Book Portal_files/c.chetan.jpeg" alt="Profile pic">
+                        </div>
+
+                        <h4>CHETAN MAROTI CHINCHULKAR</h4>
+
+                        <div class="desc">
+                            <p align="center" class="info">Engineering Physics, BTech, 2020</p>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="DATA/THEODORE SUANLALFAKA _ SAIL Year Book Portal.html" style="text-decoration: none;display: flex;">
+                    <div class="card">
+                        <div class="thumbnail">
+                            <img src="DATA/THEODORE SUANLALFAKA _ SAIL Year Book Portal_files/no-profile-pic.png" alt="Profile pic">
+                        </div>
+
+                        <h4>THEODORE SUANLALFAKA</h4>
+
+                        <div class="desc">
+                            <p align="center" class="info">Engineering Physics, BTech, 2020</p>
+                        </div>
+                    </div>
+                </a>
+              
+                <a href="DATA/MADHIRA JAYENDRA SHANKAR _ SAIL Year Book Portal.html" style="text-decoration: none;display: flex;">
+                    <div class="card">
+                        <div class="thumbnail">
+                            <img src="DATA/MADHIRA JAYENDRA SHANKAR _ SAIL Year Book Portal_files/s.madhira.jpg" alt="Profile pic">
+                        </div>
+
+                        <h4>MADHIRA JAYENDRA SHANKAR</h4>
+
+                        <div class="desc">
+                            <p align="center" class="info">Engineering Physics, BTech, 2020</p>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="DATA/SUHAYL MAHEK _ SAIL Year Book Portal.html" style="text-decoration: none;display: flex;">
+                    <div class="card">
+                        <div class="thumbnail">
+                            <img src="DATA/SUHAYL MAHEK _ SAIL Year Book Portal_files/suhayl.jpeg" alt="Profile pic">
+                        </div>
+
+                        <h4>SUHAYL MAHEK</h4>
+
+                        <div class="desc">
+                            <p align="center" class="info">Engineering Physics, BTech, 2020</p>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="DATA/RETHYAM GUPTA _ SAIL Year Book Portal.html" style="text-decoration: none;display: flex;">
+                    <div class="card">
+                        <div class="thumbnail">
+                            <img src="DATA/RETHYAM GUPTA _ SAIL Year Book Portal_files/g.rethyam.jpg" alt="Profile pic">
+                        </div>
+
+                        <h4>RETHYAM GUPTA</h4>
+
+                        <div class="desc">
+                            <p align="center" class="info">Engineering Physics, BTech, 2020</p>
+                        </div>
+                    </div>
+                </a>
+               
+                <a href="DATA/AMAY SINGH _ SAIL Year Book Portal.html" style="text-decoration: none;display: flex;">
+                    <div class="card">
+                        <div class="thumbnail">
+                            <img src="DATA/AMAY SINGH _ SAIL Year Book Portal_files/s.amay.jpg" alt="Profile pic">
+                        </div>
+
+                        <h4>AMAY SINGH</h4>
+
+                        <div class="desc">
+                            <p align="center" class="info">Engineering Physics, BTech, 2020</p>
+                        </div>
+                    </div>
+                </a>
+               
+                <a href="DATA/SUDHIR.S _ SAIL Year Book Portal.html" style="text-decoration: none;display: flex;">
+                    <div class="card">
+                        <div class="thumbnail">
+                            <img src="DATA/SUDHIR.S _ SAIL Year Book Portal_files/no-profile-pic.png" alt="Profile pic">
+                        </div>
+
+                        <h4>SUDHIR.S</h4>
+
+                        <div class="desc">
+                            <p align="center" class="info">Engineering Physics, BTech, 2020</p>
+                        </div>
+                    </div>
+                </a>
+               
+                <a href="DATA/JOSHI ADITI _ SAIL Year Book Portal.html" style="text-decoration: none;display: flex;">
+                    <div class="card">
+                        <div class="thumbnail">
+                            <img src="DATA/JOSHI ADITI _ SAIL Year Book Portal_files/j.aditi.jpg" alt="Profile pic">
+                        </div>
+
+                        <h4>JOSHI ADITI</h4>
+
+                        <div class="desc">
+                            <p align="center" class="info">Engineering Physics, BTech, 2020</p>
+                        </div>
+                    </div>
+                </a>
+               
+                <a href="DATA/DHRUV KUMAR _ SAIL Year Book Portal.html" style="text-decoration: none;display: flex;">
+                    <div class="card">
+                        <div class="thumbnail">
+                            <img src="DATA/DHRUV KUMAR _ SAIL Year Book Portal_files/dhruv.kumar.jpg" alt="Profile pic">
+                        </div>
+
+                        <h4>DHRUV KUMAR</h4>
+
+                        <div class="desc">
+                            <p align="center" class="info">Engineering Physics, BTech, 2020</p>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="DATA/KULKARNI PRATHAM SHRIDHAR _ SAIL Year Book Portal.html" style="text-decoration: none;display: flex;">
+                    <div class="card">
+                        <div class="thumbnail">
+                            <img src="DATA/KULKARNI PRATHAM SHRIDHAR _ SAIL Year Book Portal_files/k.shridhar.jpeg" alt="Profile pic">
+                        </div>
+
+                        <h4>KULKARNI PRATHAM SHRIDHAR</h4>
+
+                        <div class="desc">
+                            <p align="center" class="info">Engineering Physics, BTech, 2020</p>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="DATA/DAKSH ADHAR _ SAIL Year Book Portal.html" style="text-decoration: none;display: flex;">
+                    <div class="card">
+                        <div class="thumbnail">
+                            <img src="DATA/DAKSH ADHAR _ SAIL Year Book Portal_files/a.daksh.jpg" alt="Profile pic">
+                        </div>
+
+                        <h4>DAKSH ADHAR</h4>
+
+                        <div class="desc">
+                            <p align="center" class="info">Engineering Physics, BTech, 2020</p>
+                        </div>
+                    </div>
+                </a>
+            
+                <a href="DATA/MEHARE MADHURA VINOD _ SAIL Year Book Portal.html" style="text-decoration: none;display: flex;">
+                    <div class="card">
+                        <div class="thumbnail">
+                            <img src="DATA/MEHARE MADHURA VINOD _ SAIL Year Book Portal_files/no-profile-pic.png" alt="Profile pic">
+                        </div>
+
+                        <h4>MEHARE MADHURA VINOD</h4>
+
+                        <div class="desc">
+                            <p align="center" class="info">Engineering Physics, BTech, 2020</p>
+                        </div>
+                    </div>
+                </a>
+               
+                <a href="DATA/MOHAMED JASIM _ SAIL Year Book Portal.html" style="text-decoration: none;display: flex;">
+                    <div class="card">
+                        <div class="thumbnail">
+                            <img src="DATA/MOHAMED JASIM _ SAIL Year Book Portal_files/j.mohamed.jpeg" alt="Profile pic">
+                        </div>
+
+                        <h4>MOHAMED JASIM</h4>
+
+                        <div class="desc">
+                            <p align="center" class="info">Engineering Physics, BTech, 2020</p>
+                        </div>
+                    </div>
+                </a>
+               
+                <a href="DATA/SOHAM AVINASH ATKAR _ SAIL Year Book Portal.html" style="text-decoration: none;display: flex;">
+                    <div class="card">
+                        <div class="thumbnail">
+                            <img src="DATA/SOHAM AVINASH ATKAR _ SAIL Year Book Portal_files/a.soham.jpeg" alt="Profile pic">
+                        </div>
+
+                        <h4>SOHAM AVINASH ATKAR</h4>
+
+                        <div class="desc">
+                            <p align="center" class="info">Engineering Physics, BTech, 2020</p>
+                        </div>
+                    </div>
+                </a>
+               
+                <a href="DATA/APURV KUSHWAHA _ SAIL Year Book Portal.html" style="text-decoration: none;display: flex;">
+                    <div class="card">
+                        <div class="thumbnail">
+                            <img src="DATA/APURV KUSHWAHA _ SAIL Year Book Portal_files/k.apurv.jpeg" alt="Profile pic">
+                        </div>
+
+                        <h4>APURV KUSHWAHA</h4>
+
+                        <div class="desc">
+                            <p align="center" class="info">Engineering Physics, BTech, 2020</p>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="DATA/LAKSHYA MITTAL _ SAIL Year Book Portal.html" style="text-decoration: none;display: flex;">
+                    <div class="card">
+                        <div class="thumbnail">
+                            <img src="DATA/LAKSHYA MITTAL _ SAIL Year Book Portal_files/m.lakshya.jpeg" alt="Profile pic">
+                        </div>
+
+                        <h4>LAKSHYA MITTAL</h4>
+
+                        <div class="desc">
+                            <p align="center" class="info">Engineering Physics, BTech, 2020</p>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="DATA/CHITTI AVINASH REDDY _ SAIL Year Book Portal.html" style="text-decoration: none;display: flex;">
+                    <div class="card">
+                        <div class="thumbnail">
+                            <img src="DATA/CHITTI AVINASH REDDY _ SAIL Year Book Portal_files/r.chitti.jpg" alt="Profile pic">
+                        </div>
+
+                        <h4>CHITTI AVINASH REDDY</h4>
+
+                        <div class="desc">
+                            <p align="center" class="info">Engineering Physics, BTech, 2020</p>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="DATA/ADHRUTH GANESH _ SAIL Year Book Portal.html" style="text-decoration: none;display: flex;">
+                    <div class="card">
+                        <div class="thumbnail">
+                            <img src="DATA/ADHRUTH GANESH _ SAIL Year Book Portal_files/no-profile-pic.png" alt="Profile pic">
+                        </div>
+
+                        <h4>ADHRUTH GANESH</h4>
+
+                        <div class="desc">
+                            <p align="center" class="info">Engineering Physics, BTech, 2020</p>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="DATA/S VENKAT BHARADWAJ _ SAIL Year Book Portal.html" style="text-decoration: none;display: flex;">
+                    <div class="card">
+                        <div class="thumbnail">
+                            <img src="DATA/S VENKAT BHARADWAJ _ SAIL Year Book Portal_files/s.bharadwaj.jpg" alt="Profile pic">
+                        </div>
+
+                        <h4>S VENKAT BHARADWAJ</h4>
+
+                        <div class="desc">
+                            <p align="center" class="info">Engineering Physics, BTech, 2020</p>
+                        </div>
+                    </div>
+                </a>
+               
+                <a href="DATA/AVINASH YADAV _ SAIL Year Book Portal.html" style="text-decoration: none;display: flex;">
+                    <div class="card">
+                        <div class="thumbnail">
+                            <img src="DATA/AVINASH YADAV _ SAIL Year Book Portal_files/avinash.y.jpg" alt="Profile pic">
+                        </div>
+
+                        <h4>AVINASH YADAV</h4>
+
+                        <div class="desc">
+                            <p align="center" class="info">Engineering Physics, BTech, 2020</p>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="DATA/PRAMITI GUPTA _ SAIL Year Book Portal.html" style="text-decoration: none;display: flex;">
+                    <div class="card">
+                        <div class="thumbnail">
+                            <img src="DATA/PRAMITI GUPTA _ SAIL Year Book Portal_files/g.pramiti.jpg" alt="Profile pic">
+                        </div>
+
+                        <h4>PRAMITI GUPTA</h4>
+
+                        <div class="desc">
+                            <p align="center" class="info">Engineering Physics, BTech, 2020</p>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="DATA/M KAVIN _ SAIL Year Book Portal.html" style="text-decoration: none;display: flex;">
+                    <div class="card">
+                        <div class="thumbnail">
+                            <img src="DATA/M KAVIN _ SAIL Year Book Portal_files/m.kavin.jpg" alt="Profile pic">
+                        </div>
+
+                        <h4>M KAVIN</h4>
+
+                        <div class="desc">
+                            <p align="center" class="info">Engineering Physics, BTech, 2020</p>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="DATA/VIKRAM SINGH _ SAIL Year Book Portal.html" style="text-decoration: none;display: flex;">
+                    <div class="card">
+                        <div class="thumbnail">
+                            <img src="DATA/VIKRAM SINGH _ SAIL Year Book Portal_files/vikram200121063.jpg" alt="Profile pic">
+                        </div>
+
+                        <h4>VIKRAM SINGH</h4>
+
+                        <div class="desc">
+                            <p align="center" class="info">Engineering Physics, BTech, 2020</p>
+                        </div>
+                    </div>
+                </a>
+               
+                <a href="DATA/ANURAG PRASHANT KATKAR _ SAIL Year Book Portal.html" style="text-decoration: none;display: flex;">
+                    <div class="card">
+                        <div class="thumbnail">
+                            <img src="DATA/ANURAG PRASHANT KATKAR _ SAIL Year Book Portal_files/a.katkar.jpg" alt="Profile pic">
+                        </div>
+
+                        <h4>ANURAG PRASHANT KATKAR</h4>
+
+                        <div class="desc">
+                            <p align="center" class="info">Engineering Physics, BTech, 2020</p>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="DATA/VIKAS S SHAVI _ SAIL Year Book Portal.html" style="text-decoration: none;display: flex;">
+                    <div class="card">
+                        <div class="thumbnail">
+                            <img src="DATA/VIKAS S SHAVI _ SAIL Year Book Portal_files/v.shavi.jpg" alt="Profile pic">
+                        </div>
+
+                        <h4>VIKAS S SHAVI</h4>
+
+                        <div class="desc">
+                            <p align="center" class="info">Engineering Physics, BTech, 2020</p>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="DATA/AKSHANSH MAHENDRA _ SAIL Year Book Portal.html" style="text-decoration: none;display: flex;">
+                    <div class="card">
+                        <div class="thumbnail">
+                            <img src="DATA/AKSHANSH MAHENDRA _ SAIL Year Book Portal_files/no-profile-pic.png" alt="Profile pic">
+                        </div>
+
+                        <h4>AKSHANSH MAHENDRA</h4>
+
+                        <div class="desc">
+                            <p align="center" class="info">Engineering Physics, BTech, 2020</p>
+                        </div>
+                    </div>
+                </a>
+               
+                <a href="DATA/BITTU PANDEY _ SAIL Year Book Portal.html" style="text-decoration: none;display: flex;">
+                    <div class="card">
+                        <div class="thumbnail">
+                            <img src="DATA/BITTU PANDEY _ SAIL Year Book Portal_files/no-profile-pic.png" alt="Profile pic">
+                        </div>
+
+                        <h4>BITTU PANDEY</h4>
+
+                        <div class="desc">
+                            <p align="center" class="info">Engineering Physics, BTech, 2020</p>
+                        </div>
+                    </div>
+                </a>
+               
+                <a href="DATA/YATHARTH PATIL _ SAIL Year Book Portal.html" style="text-decoration: none;display: flex;">
+                    <div class="card">
+                        <div class="thumbnail">
+                            <img src="DATA/YATHARTH PATIL _ SAIL Year Book Portal_files/p.yatharth.jpg" alt="Profile pic">
+                        </div>
+
+                        <h4>YATHARTH PATIL</h4>
+
+                        <div class="desc">
+                            <p align="center" class="info">Engineering Physics, BTech, 2020</p>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="DATA/SIDDHARTH GUPTA _ SAIL Year Book Portal.html" style="text-decoration: none;display: flex;">
+                    <div class="card">
+                        <div class="thumbnail">
+                            <img src="DATA/SIDDHARTH GUPTA _ SAIL Year Book Portal_files/g.siddharth.jpg" alt="Profile pic">
+                        </div>
+
+                        <h4>SIDDHARTH GUPTA</h4>
+
+                        <div class="desc">
+                            <p align="center" class="info">Engineering Physics, BTech, 2020</p>
+                        </div>
+                    </div>
+                </a>
+               
+                <a href="DATA/AKSHAI M _ SAIL Year Book Portal.html" style="text-decoration: none;display: flex;">
+                    <div class="card">
+                        <div class="thumbnail">
+                            <img src="DATA/AKSHAI M _ SAIL Year Book Portal_files/no-profile-pic.png" alt="Profile pic">
+                        </div>
+
+                        <h4>AKSHAI M</h4>
+
+                        <div class="desc">
+                            <p align="center" class="info">Engineering Physics, BTech, 2020</p>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="DATA/TERESA JACOB _ SAIL Year Book Portal.html" style="text-decoration: none;display: flex;">
+                    <div class="card">
+                        <div class="thumbnail">
+                            <img src="DATA/TERESA JACOB _ SAIL Year Book Portal_files/teresa.jpeg" alt="Profile pic">
+                        </div>
+
+                        <h4>TERESA JACOB</h4>
+
+                        <div class="desc">
+                            <p align="center" class="info">Engineering Physics, BTech, 2020</p>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="DATA/JANBANDHU TANMAY RAVINDRA _ SAIL Year Book Portal.html" style="text-decoration: none;display: flex;">
+                    <div class="card">
+                        <div class="thumbnail">
+                            <img src="DATA/JANBANDHU TANMAY RAVINDRA _ SAIL Year Book Portal_files/no-profile-pic.png" alt="Profile pic">
+                        </div>
+
+                        <h4>JANBANDHU TANMAY RAVINDRA</h4>
+
+                        <div class="desc">
+                            <p align="center" class="info">Engineering Physics, BTech, 2020</p>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="DATA/MIHIR KUMAR SINGH _ SAIL Year Book Portal.html" style="text-decoration: none;display: flex;">
+                    <div class="card">
+                        <div class="thumbnail">
+                            <img src="DATA/MIHIR KUMAR SINGH _ SAIL Year Book Portal_files/mihir.singh.jpg" alt="Profile pic">
+                        </div>
+
+                        <h4>MIHIR KUMAR SINGH</h4>
+
+                        <div class="desc">
+                            <p align="center" class="info">Engineering Physics, BTech, 2020</p>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="DATA/TANU _ SAIL Year Book Portal.html" style="text-decoration: none;display: flex;">
+                    <div class="card">
+                        <div class="thumbnail">
+                            <img src="DATA/TANU _ SAIL Year Book Portal_files/tanu200121056.jpg" alt="Profile pic">
+                        </div>
+
+                        <h4>TANU</h4>
+
+                        <div class="desc">
+                            <p align="center" class="info">Engineering Physics, BTech, 2020</p>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="DATA/SHASHANK KUMAR RANJAN _ SAIL Year Book Portal.html" style="text-decoration: none;display: flex;">
+                    <div class="card">
+                        <div class="thumbnail">
+                            <img src="DATA/SHASHANK KUMAR RANJAN _ SAIL Year Book Portal_files/shashank.ranjan.jpg" alt="Profile pic">
+                        </div>
+
+                        <h4>SHASHANK KUMAR RANJAN</h4>
+
+                        <div class="desc">
+                            <p align="center" class="info">Engineering Physics, BTech, 2020</p>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="DATA/NABEEL KHAN MOHAMMED _ SAIL Year Book Portal.html" style="text-decoration: none;display: flex;">
+                    <div class="card">
+                        <div class="thumbnail">
+                            <img src="DATA/NABEEL KHAN MOHAMMED _ SAIL Year Book Portal_files/m.nabeel.jpg" alt="Profile pic">
+                        </div>
+
+                        <h4>NABEEL KHAN MOHAMMED</h4>
+
+                        <div class="desc">
+                            <p align="center" class="info">Engineering Physics, BTech, 2020</p>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="DATA/DEVAHUTI TALUKDER _ SAIL Year Book Portal.html" style="text-decoration: none;display: flex;">
+                    <div class="card">
+                        <div class="thumbnail">
+                            <img src="DATA/DEVAHUTI TALUKDER _ SAIL Year Book Portal_files/t.devahuti.jpg" alt="Profile pic">
+                        </div>
+
+                        <h4>DEVAHUTI TALUKDER</h4>
+
+                        <div class="desc">
+                            <p align="center" class="info">Engineering Physics, BTech, 2020</p>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="DATA/TARANG KAMBLE _ SAIL Year Book Portal.html" style="text-decoration: none;display: flex;">
+                    <div class="card">
+                        <div class="thumbnail">
+                            <img src="DATA/TARANG KAMBLE _ SAIL Year Book Portal_files/t.kamble.jpg" alt="Profile pic">
+                        </div>
+
+                        <h4>TARANG KAMBLE</h4>
+
+                        <div class="desc">
+                            <p align="center" class="info">Engineering Physics, BTech, 2020</p>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="DATA/SOMESH RAJ _ SAIL Year Book Portal.html" style="text-decoration: none;display: flex;">
+                    <div class="card">
+                        <div class="thumbnail">
+                            <img src="DATA/SOMESH RAJ _ SAIL Year Book Portal_files/r.somesh.jpg" alt="Profile pic">
+                        </div>
+
+                        <h4>SOMESH RAJ</h4>
+
+                        <div class="desc">
+                            <p align="center" class="info">Engineering Physics, BTech, 2020</p>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="DATA/SANJANA BATHULA _ SAIL Year Book Portal.html" style="text-decoration: none;display: flex;">
+                    <div class="card">
+                        <div class="thumbnail">
+                            <img src="DATA/SANJANA BATHULA _ SAIL Year Book Portal_files/b.sanjana.jpeg" alt="Profile pic">
+                        </div>
+
+                        <h4>SANJANA BATHULA</h4>
+
+                        <div class="desc">
+                            <p align="center" class="info">Engineering Physics, BTech, 2020</p>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="DATA/SIDDHARTH BHATT _ SAIL Year Book Portal.html" style="text-decoration: none;display: flex;">
+                    <div class="card">
+                        <div class="thumbnail">
+                            <img src="DATA/SIDDHARTH BHATT _ SAIL Year Book Portal_files/siddharth.bhatt.png" alt="Profile pic">
+                        </div>
+
+                        <h4>SIDDHARTH BHATT</h4>
+
+                        <div class="desc">
+                            <p align="center" class="info">Engineering Physics, BTech, 2020</p>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="DATA/ANURAG SANJAY KADAM _ SAIL Year Book Portal.html" style="text-decoration: none;display: flex;">
+                    <div class="card">
+                        <div class="thumbnail">
+                            <img src="DATA/ANURAG SANJAY KADAM _ SAIL Year Book Portal_files/anurag.kadam.jpg" alt="Profile pic">
+                        </div>
+
+                        <h4>ANURAG SANJAY KADAM</h4>
+
+                        <div class="desc">
+                            <p align="center" class="info">Engineering Physics, BTech, 2020</p>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="DATA/PRIYAM BHAVSAR _ SAIL Year Book Portal.html" style="text-decoration: none;display: flex;">
+                    <div class="card">
+                        <div class="thumbnail">
+                            <img src="DATA/PRIYAM BHAVSAR _ SAIL Year Book Portal_files/b.priyam.jpg" alt="Profile pic">
+                        </div>
+
+                        <h4>PRIYAM BHAVSAR</h4>
+
+                        <div class="desc">
+                            <p align="center" class="info">Engineering Physics, BTech, 2020</p>
+                        </div>
+                    </div>
+                </a>
+               
+                <a href="DATA/KUMAR ABHIJEET _ SAIL Year Book Portal.html" style="text-decoration: none;display: flex;">
+                    <div class="card">
+                        <div class="thumbnail">
+                            <img src="DATA/KUMAR ABHIJEET _ SAIL Year Book Portal_files/no-profile-pic.png" alt="Profile pic">
+                        </div>
+
+                        <h4>KUMAR ABHIJEET</h4>
+
+                        <div class="desc">
+                            <p align="center" class="info">Engineering Physics, BTech, 2020</p>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="DATA/PANTITHUANLIU KAMEI _ SAIL Year Book Portal.html" style="text-decoration: none;display: flex;">
+                    <div class="card">
+                        <div class="thumbnail">
+                            <img src="DATA/PANTITHUANLIU KAMEI _ SAIL Year Book Portal_files/pkamei.jpeg" alt="Profile pic">
+                        </div>
+
+                        <h4>PANTITHUANLIU KAMEI</h4>
+
+                        <div class="desc">
+                            <p align="center" class="info">Engineering Physics, BTech, 2020</p>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="DATA/PIYUSH S SHENDE _ SAIL Year Book Portal.html" style="text-decoration: none;display: flex;">
+                    <div class="card">
+                        <div class="thumbnail">
+                            <img src="DATA/PIYUSH S SHENDE _ SAIL Year Book Portal_files/piyush.shende.jpg" alt="Profile pic">
+                        </div>
+
+                        <h4>PIYUSH S SHENDE</h4>
+
+                        <div class="desc">
+                            <p align="center" class="info">Engineering Physics, BTech, 2020</p>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="DATA/NAVEEN VISHWAKARMA _ SAIL Year Book Portal.html" style="text-decoration: none;display: flex;">
+                    <div class="card">
+                        <div class="thumbnail">
+                            <img src="DATA/NAVEEN VISHWAKARMA _ SAIL Year Book Portal_files/n.vishwakarma.jpg" alt="Profile pic">
+                        </div>
+
+                        <h4>NAVEEN VISHWAKARMA</h4>
+
+                        <div class="desc">
+                            <p align="center" class="info">Engineering Physics, BTech, 2020</p>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="DATA/ANUJ GUPTA _ SAIL Year Book Portal.html" style="text-decoration: none;display: flex;">
+                    <div class="card">
+                        <div class="thumbnail">
+                            <img src="DATA/ANUJ GUPTA _ SAIL Year Book Portal_files/anuj.g.jpg" alt="Profile pic">
+                        </div>
+
+                        <h4>ANUJ GUPTA</h4>
+
+                        <div class="desc">
+                            <p align="center" class="info">Engineering Physics, BTech, 2020</p>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="DATA/HEIBORMI SUCHIANG _ SAIL Year Book Portal.html" style="text-decoration: none;display: flex;">
+                    <div class="card">
+                        <div class="thumbnail">
+                            <img src="DATA/HEIBORMI SUCHIANG _ SAIL Year Book Portal_files/no-profile-pic.png" alt="Profile pic">
+                        </div>
+
+                        <h4>HEIBORMI SUCHIANG</h4>
+
+                        <div class="desc">
+                            <p align="center" class="info">Engineering Physics, BTech, 2020</p>
+                        </div>
+                    </div>
+                </a>
+               
+                <a href="DATA/GILKARA ARNAV NAIDU _ SAIL Year Book Portal.html" style="text-decoration: none;display: flex;">
+                    <div class="card">
+                        <div class="thumbnail">
+                            <img src="DATA/GILKARA ARNAV NAIDU _ SAIL Year Book Portal_files/n.gilkara.jpg" alt="Profile pic">
+                        </div>
+
+                        <h4>GILKARA ARNAV NAIDU</h4>
+
+                        <div class="desc">
+                            <p align="center" class="info">Engineering Physics, BTech, 2020</p>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="DATA/TARANNUM _ SAIL Year Book Portal.html" style="text-decoration: none;display: flex;">
+                    <div class="card">
+                        <div class="thumbnail">
+                            <img src="DATA/TARANNUM _ SAIL Year Book Portal_files/tarannum.jpeg" alt="Profile pic">
+                        </div>
+
+                        <h4>TARANNUM</h4>
+
+                        <div class="desc">
+                            <p align="center" class="info">Engineering Physics, BTech, 2020</p>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="DATA/GORITYALA DEEPTHI _ SAIL Year Book Portal.html" style="text-decoration: none;display: flex;">
+                    <div class="card">
+                        <div class="thumbnail">
+                            <img src="DATA/GORITYALA DEEPTHI _ SAIL Year Book Portal_files/no-profile-pic.png" alt="Profile pic">
+                        </div>
+
+                        <h4>GORITYALA DEEPTHI</h4>
+
+                        <div class="desc">
+                            <p align="center" class="info">Engineering Physics, BTech, 2020</p>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="DATA/YASH SHARMA _ SAIL Year Book Portal.html" style="text-decoration: none;display: flex;">
+                    <div class="card">
+                        <div class="thumbnail">
+                            <img src="DATA/YASH SHARMA _ SAIL Year Book Portal_files/no-profile-pic.png" alt="Profile pic">
+                        </div>
+
+                        <h4>YASH SHARMA</h4>
+
+                        <div class="desc">
+                            <p align="center" class="info">Engineering Physics, BTech, 2020</p>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="DATA/VANSHITA SHARMA _ SAIL Year Book Portal.html" style="text-decoration: none;display: flex;">
+                    <div class="card">
+                        <div class="thumbnail">
+                            <img src="DATA/VANSHITA SHARMA _ SAIL Year Book Portal_files/no-profile-pic.png" alt="Profile pic">
+                        </div>
+
+                        <h4>VANSHITA SHARMA</h4>
+
+                        <div class="desc">
+                            <p align="center" class="info">Engineering Physics, BTech, 2020</p>
+                        </div>
+                    </div>
+                </a>
+               
+                <a href="DATA/PRATEEK RAJAN GUPTA _ SAIL Year Book Portal.html" style="text-decoration: none;display: flex;">
+                    <div class="card">
+                        <div class="thumbnail">
+                            <img src="DATA/PRATEEK RAJAN GUPTA _ SAIL Year Book Portal_files/no-profile-pic.png" alt="Profile pic">
+                        </div>
+
+                        <h4>PRATEEK RAJAN GUPTA</h4>
+
+                        <div class="desc">
+                            <p align="center" class="info">Engineering Physics, BTech, 2020</p>
+                        </div>
+                    </div>
+                </a>    
+            </div>
+
+            <div class="row mt-3">
+                <div class="col-12">
+                    <h4 class="text-center">End of results. If you still can't find your friends' profiles. Invite them to <a href="https://www.iitg.ac.in/yearbook/">SAIL Yearbook Portal</a></h4>
+                </div>
+            </div>
+        </div>
+        
+
+    </div></main>
+    
+    <!-- Disable Emoji -->
+    <script src="./Profile Search _ SAIL Year Book Portal_temp_files/disable_emoji.js.download"></script>
+    
+
+<script type="text/javascript">
+    
+    function searchFunction() {
+        var input = document.getElementById("search-input");
+        var filter = input.value.toUpperCase();
+        var profile_flex = document.getElementById("swiperflex");
+        var profile_buttons = profile_flex.getElementsByTagName("a");
+        for (i = 0; i < profile_buttons.length; i++) {
+            var profile_button = profile_buttons[i];
+            if (profile_button) {
+                var profile_name = profile_button.getElementsByTagName("h4")[0].innerText;
+                var profile_dept = profile_button.getElementsByTagName("p")[0].innerText;
+                if (profile_name.toUpperCase().indexOf(filter) > -1) {
+                    profile_button.style.display = "";
+                } else if (profile_dept.toUpperCase().indexOf(filter) > -1) {
+                    profile_button.style.display = "";
+                }
+                else {
+                    profile_button.style.display = "none";
+                }
+            }
+        }
+    }
+</script>
+
+
+
+
+</body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+      div.grammarly-desktop-integration {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select:none;
+        user-select:none;
+      }
+
+      div.grammarly-desktop-integration:before {
+        content: attr(data-content);
+      }
+    </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{&quot;mode&quot;:&quot;limited&quot;,&quot;isActive&quot;:false,&quot;isUserDisabled&quot;:false}"></div></template></grammarly-desktop-integration></html>
